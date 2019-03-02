@@ -1,0 +1,17 @@
+{
+    "name": "mitquinn/wadl-parser",
+    "description": "This package is used to parse wadl files.",
+    "type": "library",
+    "require-dev": {
+        "phpunit/phpunit": "^8.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mitchell Quinn",
+            "email": "mitchell.david.quinn@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
