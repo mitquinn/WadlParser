@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+
+
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:complexType name="SipCertificate">
+		<xs:sequence minOccurs="0">
+
+				<xs:element name="URI" type="xs:anyURI" minOccurs="0" />			
+				<xs:element name="ObjectId" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation> The primary key for this table. A globally unique, system-generated identifier.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				
+				<xs:element name="Certificate" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation> X.509 certificate as a PEM format string (base-64 encoded).</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				
+				<xs:element name="PrivateKey" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation> RSA private key matching the public key in column Certificate</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				
+				<xs:element name="SubjectName" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation> X.509 subject name</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				
+				<xs:element name="DisplayName" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation> Display name of this object</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				
+			<xs:any minOccurs="0" maxOccurs="unbounded" namespace="##other" processContents="lax" />
+			<xs:element name="NullFields"> 
+				<xs:simpleType>  
+					<xs:list itemType="xs:string"/> 
+				</xs:simpleType> 
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>	
+	<xs:element name="SipCertificate" type="SipCertificate"/>
+	<xs:element name="SipCertificates">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="SipCertificate" type="SipCertificate" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="total" type="xs:integer"/>
+		</xs:complexType>
+	</xs:element>	
+</xs:schema>
