@@ -34,7 +34,7 @@ class Representation
     /**
      * @return string
      */
-    public function getMediaType(): string
+    public function getMediaType(): ?string
     {
         return $this->mediaType;
     }

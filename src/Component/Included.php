@@ -37,7 +37,7 @@ class Included
     /**
      * @return string
      */
-    public function getHref(): string
+    public function getHref(): ?string
     {
         return $this->href;
     }

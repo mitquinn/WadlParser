@@ -46,7 +46,7 @@ class Resources
     /**
      * @return string
      */
-    public function getBase(): string
+    public function getBase(): ?string
     {
         return $this->base;
     }

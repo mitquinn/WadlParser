@@ -85,7 +85,7 @@ class Param
     /**
      * @return string
      */
-    public function getType(): string
+    public function getType(): ?string
     {
         return $this->type;
     }
@@ -103,7 +103,7 @@ class Param
     /**
      * @return string
      */
-    public function getStyle(): string
+    public function getStyle(): ?string
     {
         return $this->style;
     }
@@ -121,7 +121,7 @@ class Param
     /**
      * @return string
      */
-    public function getName(): string
+    public function getName(): ?string
     {
         return $this->name;
     }
@@ -139,7 +139,7 @@ class Param
     /**
      * @return string
      */
-    public function getDefault(): string
+    public function getDefault(): ?string
     {
         return $this->default;
     }
@@ -157,7 +157,7 @@ class Param
     /**
      * @return string
      */
-    public function getRequired(): string
+    public function getRequired(): ?string
     {
         return $this->required;
     }
